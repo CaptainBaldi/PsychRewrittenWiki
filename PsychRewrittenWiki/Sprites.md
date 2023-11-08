@@ -43,7 +43,7 @@ Creates a Lua sprite that can easily have animations assigned and played.
 * `y` - The initial Y position of the sprite (Default is 0).
 * `spriteType` - The type of the sprite's animation (Default is "sparrow"). A full list of available sprite types can be found [here](https://github.com/ShadowMario/FNF-PsychEngine/blob/experimental/source/psychlua/LuaUtils.hx#L250).
 
-### addAnimation(obj:String, name:String, frames:Array<Int>, framerate:Int = 24, loop:Bool = true)
+### addAnimation(obj:String, name:String, frames:Array(Int), framerate:Int = 24, loop:Bool = true)
 Adds an animation a sprite via individual frames.
 
 * `obj` - The sprite's string tag.
