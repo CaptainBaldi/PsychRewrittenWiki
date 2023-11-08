@@ -1,6 +1,6 @@
 ## Basic Functions
 
-### makeLuaSprite(tag:String, ?image:String = null, ?x:Float = 0, ?y:Float = 0)
+### makeLuaSprite(tag:String, ?image:String, ?x:Float, ?y:Float)
 Creates a static Lua sprite.
 
 * `tag` - The string tag you want to assign the sprite to.
@@ -8,21 +8,21 @@ Creates a static Lua sprite.
 * `x` - The initial X position of the sprite (Default is 0).
 * `y` - The initial Y position of the sprite (Default is 0).
 
-### makeGraphic(obj:String, width:Int = 256, height:Int = 256, color:String = 'FFFFFF')
+### makeGraphic(obj:String, width:Int, height:Int, color:String)
 Generates a simple rectangular graphic for a sprite.
 
 * `obj` - The sprite's string tag.
-* `width` - The width of the graphic to be generated.
-* `height` - The height of the graphic to be generated.
+* `width` - The width of the graphic to be generated (Default is 256).
+* `height` - The height of the graphic to be generated (Default is 256).
 * `color` - The color of the graphic to be generated (Default is "FFFFFF" or "white").
 
-### addLuaSprite(tag:String, front:Bool = false)
+### addLuaSprite(tag:String, front:Bool)
 Adds a Lua sprite to the game.
 
 * `tag` - The sprite's string tag.
 * `front` - Whether the sprite should be added in front or behind character groups (Default is false).
 
-### removeLuaSprite(tag:String, destroy:Bool = true)
+### removeLuaSprite(tag:String, destroy:Bool)
 Removes a Lua sprite from the game.
 
 * `tag` - The sprite's string tag.
@@ -34,7 +34,7 @@ Removes a Lua sprite from the game.
 
 ## Animation
 
-### makeAnimatedLuaSprite(tag:String, ?image:String = null, ?x:Float = 0, ?y:Float = 0, ?spriteType:String = "sparrow")
+### makeAnimatedLuaSprite(tag:String, ?image:String, ?x:Float, ?y:Float, ?spriteType:String)
 Creates a Lua sprite that can easily have animations assigned and played.
 
 * `tag` - The string tag you want to assign the sprite to.
@@ -43,7 +43,7 @@ Creates a Lua sprite that can easily have animations assigned and played.
 * `y` - The initial Y position of the sprite (Default is 0).
 * `spriteType` - The type of the sprite's animation (Default is "sparrow"). A full list of available sprite types can be found [here](https://github.com/ShadowMario/FNF-PsychEngine/blob/experimental/source/psychlua/LuaUtils.hx#L250).
 
-### addAnimation(obj:String, name:String, frames:Array(Int), framerate:Int = 24, loop:Bool = true)
+### addAnimation(obj:String, name:String, frames:Array(Int), framerate:Int, loop:Bool)
 Adds an animation a sprite via individual frames.
 
 * `obj` - The sprite's string tag.
@@ -52,7 +52,7 @@ Adds an animation a sprite via individual frames.
 * `framerate` - The frames per second the animation should play at (Default is 24).
 * `loop` - Whether this animation should loop (Default is true).
 
-### addAnimationByPrefix(obj:String, name:String, prefix:String, framerate:Int = 24, loop:Bool = true)
+### addAnimationByPrefix(obj:String, name:String, prefix:String, framerate:Int, loop:Bool)
 Adds an animation to a sprite via prefixes.
 
 * `obj` - The sprite's string tag.
@@ -61,7 +61,7 @@ Adds an animation to a sprite via prefixes.
 * `framerate` - The frames per second the animation should play at (Default is 24).
 * `loop` - Whether this animation should loop (Default is true).
 
-### addAnimationByIndices(obj:String, name:String, prefix:String, indices:String, framerate:Int = 24, loop:Bool = false)
+### addAnimationByIndices(obj:String, name:String, prefix:String, indices:String, framerate:Int, loop:Bool)
 Adds an animation to a sprite via animation indices.
 
 * `obj` - The sprite's string tag.
@@ -71,7 +71,7 @@ Adds an animation to a sprite via animation indices.
 * `framerate` - The frames per second the animation should play at (Default is 24).
 * `loop` - Whether this animation should loop (Default is false).
 
-### playAnim(obj:String, name:String, forced:Bool = false, ?reverse:Bool = false, ?startFrame:Int = 0)
+### playAnim(obj:String, name:String, forced:Bool, ?reverse:Bool, ?startFrame:Int)
 Plays a sprite animation.
 
 * `obj` - The sprite's string tag.
