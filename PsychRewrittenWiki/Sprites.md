@@ -67,7 +67,7 @@ Adds an animation to a sprite via animation indices.
 * `obj` - The sprite's string tag.
 * `name` - What the animation should be called.
 * `prefix` - The animation prefix on your atlas or other data source.
-* `indices` - A string containing the frames the animation should have (Frames must be separated by a comma, for example, '1, 3, 5').
+* `indices` - A list of frame indices. This can either be a string, with frames being separated by a comma (e.g., '1, 3, 5'), or an array (e.g., {1, 3, 5}).
 * `framerate` - The frames per second the animation should play at (Default is 24).
 * `loop` - Whether this animation should loop (Default is false).
 
